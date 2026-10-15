@@ -1,0 +1,509 @@
+/* ==========================================
+   GALERI FIO — SOFT PINK AESTHETIC
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --pink: #e99ab7;
+    --pink-dark: #d9799d;
+    --pink-light: #fff0f5;
+    --background: #fff9fc;
+    --text: #765365;
+    --muted: #b08d9d;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--background);
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   HALAMAN PEMBUKA
+========================================== */
+
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 209, 226, 0.65),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(248, 203, 221, 0.65),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff9fc,
+            #fff0f5,
+            #fffafd
+        );
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    animation: fadeUp 1s ease both;
+}
+
+.hero .small-title {
+    color: var(--pink-dark);
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(48px, 8vw, 78px);
+    font-weight: 400;
+    line-height: 1.2;
+    color: #754b60;
+    margin: 15px 0 30px;
+}
+
+.hero h1 span {
+    color: var(--pink);
+}
+
+/* TOMBOL GALERI FIO */
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 34px;
+    margin-top: 5px;
+
+    background: var(--pink);
+    color: var(--white);
+    text-decoration: none;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    border: 1px solid var(--pink);
+    border-radius: 50px;
+
+    box-shadow: 0 8px 24px rgba(217, 121, 157, 0.22);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-button:hover {
+    background: var(--pink-dark);
+    border-color: var(--pink-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(217, 121, 157, 0.3);
+}
+
+.hero-button:active {
+    transform: scale(0.97);
+}
+
+/* ==========================================
+   BAGIAN GALERI
+========================================== */
+
+.gallery-section {
+    min-height: 100vh;
+    padding: 75px 5% 85px;
+    background: var(--background);
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.section-heading .small-title {
+    margin-bottom: 12px;
+    color: var(--pink-dark);
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(34px, 5vw, 48px);
+    line-height: 1.3;
+    font-weight: 400;
+    color: #754b60;
+}
+
+.section-heading h2 span {
+    color: var(--pink);
+}
+
+.section-description {
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* SUSUNAN FOTO */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    align-items: start;
+}
+
+/* FOTO */
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+
+    background: #f8e8ef;
+    border: 1px solid rgba(233, 154, 183, 0.12);
+    border-radius: 9px;
+
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    box-shadow: 0 4px 15px rgba(118, 83, 101, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(118, 83, 101, 0.15);
+}
+
+.gallery img:active {
+    transform: scale(0.98);
+}
+
+/* ==========================================
+   POP-UP FOTO
+   Latar galeri tetap terlihat di belakang
+========================================== */
+
+.photo-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+    background: rgba(30, 15, 23, 0.72);
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.photo-popup.active {
+    display: flex;
+}
+
+.photo-popup img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 90vw;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    background: #ffffff;
+    border-radius: 10px;
+
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.4);
+
+    animation: photoZoom 0.25s ease;
+}
+
+/* TOMBOL TUTUP */
+
+.close-popup {
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.close-popup:hover {
+    background: rgba(255, 255, 255, 0.28);
+    transform: rotate(90deg);
+}
+
+/* ANIMASI MEMBESAR */
+
+@keyframes photoZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.88);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    padding: 25px 15px;
+    text-align: center;
+
+    background: #fff0f5;
+    color: #b08d9d;
+
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* ==========================================
+   TOMBOL MUSIK
+========================================== */
+
+.music-button {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+
+    background: var(--pink);
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(217, 121, 157, 0.28);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.music-button:hover {
+    background: var(--pink-dark);
+    transform: scale(1.08);
+}
+
+.music-button.playing {
+    animation: musicPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+    0%, 100% {
+        box-shadow: 0 5px 20px rgba(217, 121, 157, 0.28);
+    }
+
+    50% {
+        box-shadow: 0 5px 30px rgba(217, 121, 157, 0.65);
+    }
+}
+
+/* ==========================================
+   ANIMASI PEMBUKA
+========================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 900px) {
+    .gallery-section {
+        padding: 60px 4% 70px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+}
+
+/* ==========================================
+   HP
+========================================== */
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(46px, 12vw, 62px);
+        margin: 12px 0 25px;
+    }
+
+    .hero-button {
+        padding: 14px 27px;
+        font-size: 10px;
+    }
+
+    .gallery-section {
+        padding: 48px 13px 60px;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .section-description {
+        font-size: 11px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .gallery img {
+        border-radius: 7px;
+    }
+
+    .photo-popup {
+        padding: 12px;
+    }
+
+    .photo-popup img {
+        max-width: 94vw;
+        max-height: 80vh;
+        border-radius: 7px;
+    }
+
+    .close-popup {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 32px;
+    }
+
+    .footer {
+        padding: 22px 12px;
+        font-size: 10px;
+    }
+
+    .music-button {
+        right: 15px;
+        bottom: 15px;
+        width: 43px;
+        height: 43px;
+        font-size: 20px;
+    }
+}
+
+/* ==========================================
+   MENGURANGI GERAKAN JIKA DIPERLUKAN
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
