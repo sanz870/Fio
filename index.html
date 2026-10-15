@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Fio ♡</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* HALAMAN PEMBUKA */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .hero-content {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 72px);
+            margin: 15px 0;
+        }
+
+        .hero-description {
+            max-width: 480px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 30px;
+            background: #e99ab7;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: 0.25s ease;
+        }
+
+        .hero-button:hover {
+            background: #d9799d;
+            transform: translateY(-3px);
+        }
+
+        /* GALERI */
+        #kenangan {
+            padding-top: 45px;
+            scroll-margin-top: 20px;
+        }
+
+        #galeri img {
+            cursor: pointer;
+        }
+
+        /* POP-UP FOTO */
+        .photo-popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(30, 15, 23, 0.85);
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        .photo-popup.active {
+            display: flex;
+        }
+
+        .photo-popup img {
+            display: block;
+            max-width: 90vw;
+            max-height: 85vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 10px 45px rgba(0, 0, 0, 0.4);
+            animation: photoZoom 0.25s ease;
+        }
+
+        .close-popup {
+            position: absolute;
+            top: 18px;
+            right: 25px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 42px;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+        @keyframes photoZoom {
+            from {
+                transform: scale(0.85);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* TOMBOL MUSIK */
+        .music-button {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 10000;
+            width: 54px;
+            height: 54px;
+            border: none;
+            border-radius: 50%;
+            background: #e99ab7;
+            color: white;
+            font-size: 27px;
+            cursor: pointer;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+            transition: 0.25s ease;
+        }
+
+        .music-button:hover {
+            background: #d9799d;
+            transform: scale(1.08);
+        }
+
+        .music-button.playing {
+            animation: musicPulse 1.5s infinite;
+        }
+
+        @keyframes musicPulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(233, 154, 183, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 0 12px rgba(233, 154, 183, 0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .photo-popup {
+                padding: 12px;
+            }
+
+            .photo-popup img {
+                max-width: 94vw;
+                max-height: 80vh;
+            }
+
+            .close-popup {
+                top: 12px;
+                right: 16px;
+                font-size: 36px;
+            }
+
+            .music-button {
+                right: 16px;
+                bottom: 16px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HALAMAN PEMBUKA -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="small-title"></p>
+
+            <h1>For Fio <span>♡</span></h1>
+
+            <p class="hero-description"></p>
+
+            <a href="#kenangan" class="hero-button">
+                GALERI FIO
+            </a>
+        </div>
+    </section>
+
+    <!-- GALERI FOTO -->
+    <section id="kenangan" class="section gallery-section">
+        <div class="section-heading">
+            <p class="small-title"></p>
+            <h2>Galeri Fio <span>♡</span></h2>
+            <p class="section-description">
+                Klik foto untuk melihat lebih besar.
+            </p>
+        </div>
+
+        <div id="galeri" class="gallery">
+            <img src="./1.jpeg" alt="Kenangan 1" loading="lazy">
+            <img src="./2.jpeg" alt="Kenangan 2" loading="lazy">
+            <img src="./3.jpeg" alt="Kenangan 3" loading="lazy">
+            <img src="./4.jpeg" alt="Kenangan 4" loading="lazy">
+            <img src="./5.jpeg" alt="Kenangan 5" loading="lazy">
+            <img src="./6.jpeg" alt="Kenangan 6" loading="lazy">
+            <img src="./7.jpeg" alt="Kenangan 7" loading="lazy">
+            <img src="./8.jpeg" alt="Kenangan 8" loading="lazy">
+            <img src="./9.jpeg" alt="Kenangan 9" loading="lazy">
+            <img src="./10.jpeg" alt="Kenangan 10" loading="lazy">
+            <img src="./11.jpeg" alt="Kenangan 11" loading="lazy">
+            <img src="./12.jpeg" alt="Kenangan 12" loading="lazy">
+            <img src="./13.jpeg" alt="Kenangan 13" loading="lazy">
+            <img src="./14.jpeg" alt="Kenangan 14" loading="lazy">
+            <img src="./15.jpeg" alt="Kenangan 15" loading="lazy">
+            <img src="./16.jpeg" alt="Kenangan 16" loading="lazy">
+            <img src="./17.jpeg" alt="Kenangan 17" loading="lazy">
+            <img src="./18.jpeg" alt="Kenangan 18" loading="lazy">
+            <img src="./19.jpeg" alt="Kenangan 19" loading="lazy">
+            <img src="./20.jpeg" alt="Kenangan 20" loading="lazy">
+            <img src="./21.jpeg" alt="Kenangan 21" loading="lazy">
+            <img src="./22.jpeg" alt="Kenangan 22" loading="lazy">
+            <img src="./23.jpeg" alt="Kenangan 23" loading="lazy">
+            <img src="./24.jpeg" alt="Kenangan 24" loading="lazy">
+            <img src="./25.jpeg" alt="Kenangan 25" loading="lazy">
+            <img src="./26.jpeg" alt="Kenangan 26" loading="lazy">
+            <img src="./27.jpeg" alt="Kenangan 27" loading="lazy">
+            <img src="./28.jpeg" alt="Kenangan 28" loading="lazy">
+            <img src="./29.jpeg" alt="Kenangan 29" loading="lazy">
+        </div>
+    </section>
+
+    <!-- POP-UP FOTO -->
+    <div id="photoPopup" class="photo-popup" aria-hidden="true">
+        <button
+            id="closePopup"
+            class="close-popup"
+            type="button"
+            aria-label="Tutup foto"
+        >&times;</button>
+
+        <img id="popupImage" src="" alt="Foto diperbesar">
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        ♡ for Fio
+    </footer>
+
+    <!-- FILE MUSIK -->
+    <audio id="backgroundMusic" preload="auto" loop>
+        <source
+            src="./Anuar Zain - Sedetik Lebih.mp3"
+            type="audio/mpeg">
+        Browser kamu tidak mendukung pemutar audio.
+    </audio>
+
+    <!-- TOMBOL PUTAR / JEDA MUSIK -->
+    <button
+        id="musicButton"
+        class="music-button"
+        type="button"
+        aria-label="Putar musik"
+        title="Putar atau jeda musik"
+    >♫</button>
+
+    <script>
+        // =========================
+        // POP-UP FOTO
+        // =========================
+
+        const photos = document.querySelectorAll("#galeri img");
+        const popup = document.getElementById("photoPopup");
+        const popupImage = document.getElementById("popupImage");
+        const closeButton = document.getElementById("closePopup");
+
+        photos.forEach((photo) => {
+            photo.addEventListener("click", () => {
+                popupImage.src = photo.src;
+                popupImage.alt = photo.alt;
+                popup.classList.add("active");
+                popup.setAttribute("aria-hidden", "false");
+            });
+        });
+
+        function closePhotoPopup() {
+            popup.classList.remove("active");
+            popup.setAttribute("aria-hidden", "true");
+            popupImage.src = "";
+        }
+
+        closeButton.addEventListener("click", closePhotoPopup);
+
+        popup.addEventListener("click", (event) => {
+            if (event.target === popup) {
+                closePhotoPopup();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closePhotoPopup();
+            }
+        });
+
+        // =========================
+        // PEMUTAR MUSIK
+        // =========================
+
+        const music = document.getElementById("backgroundMusic");
+        const musicButton = document.getElementById("musicButton");
+
+        // Periksa apakah file musik berhasil dimuat.
+        music.addEventListener("error", () => {
+            console.error(
+                "File musik gagal dimuat. Periksa nama, lokasi, dan format MP3.",
+                music.error
+            );
+            musicButton.title = "Musik gagal dimuat. Periksa file MP3.";
+        });
+
+        // Musik hanya mulai setelah tombol diklik.
+        musicButton.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+
+                    musicButton.classList.add("playing");
+                    musicButton.setAttribute("aria-label", "Jeda musik");
+                    musicButton.title = "Jeda musik";
+                } catch (error) {
+                    console.error("Musik gagal diputar:", error);
+
+                    alert(
+                        "Musik belum bisa diputar. Pastikan file MP3 berada satu folder dengan index.html, namanya benar, dan formatnya valid."
+                    );
+                }
+            } else {
+                music.pause();
+                musicButton.classList.remove("playing");
+                musicButton.setAttribute("aria-label", "Putar musik");
+                musicButton.title = "Putar musik";
+            }
+        });
+
+        // Jika musik berhenti karena alasan lain, sesuaikan tombol.
+        music.addEventListener("pause", () => {
+            musicButton.classList.remove("playing");
+            musicButton.setAttribute("aria-label", "Putar musik");
+        });
+
+        music.addEventListener("play", () => {
+            musicButton.classList.add("playing");
+            musicButton.setAttribute("aria-label", "Jeda musik");
+        });
+    </script>
+
+</body>
+</html>
