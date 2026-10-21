@@ -1,0 +1,1078 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+    <title>BY FIO | Official Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Perbaikan responsif khusus layar HP */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: clip;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: clip;
+        }
+
+        img, video, audio {
+            max-width: 100%;
+        }
+
+        .menu-toggle {
+            position: relative;
+            z-index: 1002;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+
+        @media (max-width: 768px) {
+            #header {
+                position: relative;
+                z-index: 1000;
+            }
+
+            #header .menu-toggle {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                min-width: 44px;
+                min-height: 44px;
+                padding: 8px 12px;
+                position: relative;
+                z-index: 1002;
+            }
+
+            #header nav {
+                display: none !important;
+                position: absolute !important;
+                top: 100% !important;
+                left: 0 !important;
+                right: 0 !important;
+                width: 100% !important;
+                max-width: 100vw;
+                height: auto !important;
+                flex-direction: column !important;
+                align-items: stretch !important;
+                gap: 0 !important;
+                padding: 10px 16px 16px !important;
+                margin: 0 !important;
+                background: #080808 !important;
+                z-index: 1001 !important;
+                overflow: visible !important;
+                box-shadow: 0 12px 20px rgba(0, 0, 0, .35);
+            }
+
+            #header.menu-open nav {
+                display: flex !important;
+            }
+
+            #header nav a {
+                display: block !important;
+                width: 100%;
+                padding: 13px 10px !important;
+                text-align: left;
+                line-height: 1.4;
+                white-space: normal;
+                overflow-wrap: break-word;
+            }
+
+            /* Mencegah teks tampak melebar atau memanjang di layar kecil */
+            body, h1, h2, h3, h4, p, a, button, span {
+                font-stretch: normal;
+                text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+            }
+
+            h1, h2, h3, h4, p, a, button {
+                max-width: 100%;
+                overflow-wrap: break-word;
+            }
+
+            .hero-content, .about-container, .music-player,
+            .music-list, .gallery-container, .video-container,
+            .quote-content, .contact {
+                min-width: 0;
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 769px) {
+            #header .menu-toggle {
+                display: none !important;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header id="header">
+        <a href="#home" class="logo">BY <span>FIO</span></a>
+
+        <nav id="main-navigation">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#music">MUSIC</a>
+            <a href="#gallery">GALLERY</a>
+            <a href="#videos">VIDEOS</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+
+        <button class="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="main-navigation">
+            &#9776;
+        </button>
+    </header>
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="hero">
+
+            <div class="hero-background">
+                <img src="images/hero.jpg" alt="By Fio">
+            </div>
+
+            <div class="hero-content">
+                <p class="subtitle">WELCOME TO MY WORLD</p>
+
+                <h1>
+                    BY
+                    <span>FIO</span>
+                </h1>
+
+                <p class="hero-description">
+                    My Life. My Story. My World.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#gallery" class="button-primary">
+                        EXPLORE GALLERY
+                    </a>
+
+                    <a href="#about" class="button-secondary">
+                        ABOUT ME
+                    </a>
+                    <a href="#music" class="button-secondary">
+                        FAVORITE SONG
+                    </a>
+                
+                    <a href="#videos" class="button-secondary">
+                        MY VIDEO
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="hero-scroll">
+                SCROLL TO EXPLORE
+            </div>
+
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about">
+
+            <div class="section-title">
+                <p></p>
+                <h2>ABOUT <span>FIO</span></h2>
+            </div>
+
+            <div class="about-container">
+
+                <div class="about-image">
+                    <img src="fio1.jpeg" alt="Foto Fio">
+                </div>
+
+                <div class="about-text">
+                    <p class="about-label">DARIKU UNTUKKU</p>
+
+                    <h3>FIO KECIL</h3>
+
+                    <P>05 desember 2007</P>
+
+                    <p>
+                        untuk fio kecil, semoga dunia tak pernah membuatmu lupa betapa berharganya dirimu. 
+                        tumbuhlah dengan tenang, bermimpilah setinggi langit, 
+                        dan semoga hidup selalu punya cara untuk membahagiakanmu♡
+                    </p>
+
+                    <p>
+                    </p>
+
+                    <a href="#home" class="button-primary">
+                        BACK TO HOME
+                    </a>                    
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- MUSIC -->
+        <section id="music" class="music">
+
+            <div class="section-title">
+                <p>MY FAVORITE SOUNDS</p>
+                <h2>MY <span>MUSIC</span></h2>
+            </div>
+
+            <div class="music-player">
+
+                <div class="music-cover">
+                    <img
+                        id="music-cover"
+                        src="fio1.jpeg"
+                        alt="Cover Musik By Fio"
+                    >
+                </div>
+
+                <div class="music-details">
+
+                    <p class="music-label">NOW PLAYING</p>
+
+                    <h3 id="music-title">Favorite Song</h3>
+
+                    <p id="music-artist">BY FIO PLAYLIST</p>
+
+                    <audio id="audio-player" controls preload="metadata">
+                        <source src="music/song-1.mp3" type="audio/mpeg">
+                        Browser kamu tidak mendukung pemutar audio.
+                    </audio>
+
+                </div>
+
+            </div>
+
+            <div class="music-list">
+
+                <h3 class="playlist-title">
+                    <span>MY</span> PLAYLIST
+                </h3>
+
+                <div class="track">
+                    <span class="track-number">01</span>
+
+                    <div class="track-info">
+                        <h4>Cinta Sesungguhnya</h4>
+                        <p>Track One</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="play-track"
+                        data-src="Cinta Sesungguhnya.mp3"
+                        data-title="Cinta Sesungguhnya">
+                        PLAY
+                    </button>
+                </div>
+
+                <div class="track">
+                    <span class="track-number">02</span>
+
+                    <div class="track-info">
+                        <h4>Kisah Cinta Kita</h4>
+                        <p>Track Two</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="play-track"
+                        data-src="Kisah Cinta Kita.mp3"
+                        data-title="Kisah Cinta Kita">
+                        PLAY
+                    </button>
+                </div>
+
+                <div class="track">
+                    <span class="track-number">03</span>
+
+                    <div class="track-info">
+                        <h4>Anuar Zain - Sedetik Lebih</h4>
+                        <p>Track Three</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="play-track"
+                        data-src="Anuar Zain - Sedetik Lebih.mp3"
+                        data-title="Anuar Zain - Sedetik Lebih">
+                        PLAY
+                    </button>
+                </div>
+
+                <div class="track">
+                    <span class="track-number">04</span>
+
+                    <div class="track-info">
+                        <h4> Satu Shaf di Belakangku</h4>
+                        <p>Track four</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="play-track"
+                        data-src=" Satu Shaf di Belakangku .mp3"
+                        data-title=" Satu Shaf di Belakangku">
+                        PLAY
+                    </button>
+                </div>
+
+                <div class="track">
+                    <span class="track-number">05</span>
+
+                    <div class="track-info">
+                        <h4>Cinta Tanpa Syarat</h4>
+                        <p>Track five</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="play-track"
+                        data-src="Cinta Tanpa Syarat.mp3"
+                        data-title="Cinta Tanpa Syarat">
+                        PLAY
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- GALLERY: 30 FOTO -->
+<section id="gallery" class="gallery">
+
+    <div class="section-title">
+        <p>CAPTURED MOMENTS</p>
+        <h2>MY <span>GALLERY</span></h2>
+    </div>
+
+    <div class="gallery-container">
+
+        <div class="gallery-item">
+            <img src="1.jpeg" alt="Memori Fio 1">
+            <div class="gallery-overlay"><span>01 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="2.jpeg" alt="Memori Fio 2">
+            <div class="gallery-overlay"><span>02 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="3.jpeg" alt="Memori Fio 3">
+            <div class="gallery-overlay"><span>03 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="4.jpeg" alt="Memori Fio 4">
+            <div class="gallery-overlay"><span>04 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="5.jpeg" alt="Memori Fio 5">
+            <div class="gallery-overlay"><span>05 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="6.jpeg" alt="Memori Fio 6">
+            <div class="gallery-overlay"><span>06 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="7.jpeg" alt="Memori Fio 7">
+            <div class="gallery-overlay"><span>07 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="8.jpeg" alt="Memori Fio 8">
+            <div class="gallery-overlay"><span>08 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="9.jpeg" alt="Memori Fio 9">
+            <div class="gallery-overlay"><span>09 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="10.jpeg" alt="Memori Fio 10">
+            <div class="gallery-overlay"><span>10 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="11.jpeg" alt="Memori Fio 11">
+            <div class="gallery-overlay"><span>11 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="12.jpeg" alt="Memori Fio 12">
+            <div class="gallery-overlay"><span>12 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="13.jpeg" alt="Memori Fio 13">
+            <div class="gallery-overlay"><span>13 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="14.jpeg" alt="Memori Fio 14">
+            <div class="gallery-overlay"><span>14 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="15.jpeg" alt="Memori Fio 15">
+            <div class="gallery-overlay"><span>15 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="16.jpeg" alt="Memori Fio 16">
+            <div class="gallery-overlay"><span>16 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="17.jpeg" alt="Memori Fio 17">
+            <div class="gallery-overlay"><span>17 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="18.jpeg" alt="Memori Fio 18">
+            <div class="gallery-overlay"><span>18 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="19.jpeg" alt="Memori Fio 19">
+            <div class="gallery-overlay"><span>19 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="20.jpeg" alt="Memori Fio 20">
+            <div class="gallery-overlay"><span>20 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="21.jpeg" alt="Memori Fio 21">
+            <div class="gallery-overlay"><span>21 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="22.jpeg" alt="Memori Fio 22">
+            <div class="gallery-overlay"><span>22 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="23.jpeg" alt="Memori Fio 23">
+            <div class="gallery-overlay"><span>23 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="24.jpeg" alt="Memori Fio 24">
+            <div class="gallery-overlay"><span>24 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="25.jpeg" alt="Memori Fio 25">
+            <div class="gallery-overlay"><span>25 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="26.jpeg" alt="Memori Fio 26">
+            <div class="gallery-overlay"><span>26 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="27.jpeg" alt="Memori Fio 27">
+            <div class="gallery-overlay"><span>27 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="28.jpeg" alt="Memori Fio 28">
+            <div class="gallery-overlay"><span>28 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="29.jpeg" alt="Memori Fio 29">
+            <div class="gallery-overlay"><span>29 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="30.jpeg" alt="Memori Fio 30">
+            <div class="gallery-overlay"><span>30 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="31.jpeg" alt="Memori Fio 30">
+            <div class="gallery-overlay"><span>31 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="32.jpeg" alt="Memori Fio 30">
+            <div class="gallery-overlay"><span>32 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="33.jpeg" alt="Memori Fio 30">
+            <div class="gallery-overlay"><span>33 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="34.jpeg" alt="Memori Fio 30">
+            <div class="gallery-overlay"><span>34 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="35.jpeg" alt="Memori Fio 30">
+            <div class="gallery-overlay"><span>35 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="36.jpeg" alt="Memori Fio 30">
+            <div class="gallery-overlay"><span>36 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="37.jpeg" alt="Memori Fio 30">
+            <div class="gallery-overlay"><span>37 / </span></div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="38.jpeg" alt="Memori Fio 30">
+            <div class="gallery-overlay"><span>38 / </span></div>
+        </div>
+    </div>
+</section>
+
+        <!-- POP-UP FOTO: LATAR BELAKANG TETAP TERLIHAT -->
+        <div id="image-popup" class="image-popup" aria-hidden="true">
+
+            <div class="popup-content">
+
+                <button
+                    type="button"
+                    class="popup-close"
+                    aria-label="Tutup foto">
+                    &times;
+                </button>
+
+                <button
+                    type="button"
+                    class="popup-prev"
+                    aria-label="Foto sebelumnya">
+                    &#10094;
+                </button>
+
+                <img id="popup-image" src="" alt="Foto Fio">
+
+                <button
+                    type="button"
+                    class="popup-next"
+                    aria-label="Foto berikutnya">
+                    &#10095;
+                </button>
+
+                <p id="popup-counter">1 / 30</p>
+
+            </div>
+
+        </div>
+
+        <!-- VIDEOS: 5 VIDEO -->
+        <section id="videos" class="gallery">
+
+            <div class="section-title">
+                <p>MY FAVORITE CLIPS</p>
+                <h2>MY <span>VIDEOS</span></h2>
+            </div>
+
+            <div class="video-container">
+
+                <div class="video-item">
+                    <video controls preload="metadata" playsinline>
+                        <source src="vid1.mp4" type="video/mp4">
+                        Browser kamu tidak mendukung video.
+                    </video>
+                    <h3>VIDEO 01</h3>
+                </div>
+
+                <div class="video-item">
+                    <video controls preload="metadata" playsinline>
+                        <source src="vid2.mp4" type="video/mp4">
+                        Browser kamu tidak mendukung video.
+                    </video>
+                    <h3>VIDEO 02</h3>
+                </div>
+
+                <div class="video-item">
+                    <video controls preload="metadata" playsinline>
+                        <source src="vid3.mp4" type="video/mp4">
+                        Browser kamu tidak mendukung video.
+                    </video>
+                    <h3>VIDEO 03</h3>
+                </div>
+
+                <div class="video-item">
+                    <video controls preload="metadata" playsinline>
+                        <source src="vid5.mp4" type="video/mp4">
+                        Browser kamu tidak mendukung video.
+                    </video>
+                    <h3>VIDEO 04</h3>
+                </div>
+
+                <div class="video-item">
+                    <video controls preload="metadata" playsinline>
+                        <source src="vid6.mp4" type="video/mp4">
+                        Browser kamu tidak mendukung video.
+                    </video>
+                    <h3>VIDEO 05</h3>
+                </div>
+
+                <div class="video-item">
+                    <video controls preload="metadata" playsinline>
+                        <source src="vid7.mp4" type="video/mp4">
+                        Browser kamu tidak mendukung video.
+                    </video>
+                    <h3>VIDEO 06</h3>
+                </div>
+                
+            </div>
+
+        </section>
+
+        <!-- QUOTE -->
+        <section class="quote">
+
+            <div class="quote-content">
+                <p class="quote-symbol">"</p>
+
+                <h2>
+                    THIS IS
+                    <span>MY STORY.</span>
+                </h2>
+
+                <p class="quote-author">
+                    EVERY MOMENT MATTERS.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+
+            <div class="section-title">
+                <p>Catch me on my other socials</p>
+                <h2>LET'S <span>CONNECT</span></h2>
+            </div>
+
+            <p class="contact-description">
+                Follow me FIO
+            </p>
+
+            <div class="social-links">
+
+                <a href="https://www.instagram.com/fiolunee/"
+                target="_blank"
+                rel="noopener noreferrer">
+                 INSTAGRAM
+             </a>
+
+                <a href="https://www.tiktok.com/@fieetyyy?_r=1&_t=ZS-9AiGkdP1gPZ"
+                target="_blank"
+                rel="noopener noreferrer">
+                 TIKTOK
+             </a>
+
+            </div>
+
+        </section>
+
+        
+<!-- SECTION: MY PARENTS -->
+<section id="parents" class="parents-section">
+
+    <div class="section-title">
+        <p></p>
+        <h2>PAPA <span>MAMA</span></h2>
+    </div>
+
+    <div class="parents-content">
+
+
+<!-- FOTO KELUARGA LANDSCAPE -->
+<div class="family-photo">
+    <img
+        src="keluargafio.jpeg"
+        alt="Foto keluarga Fio"
+        id="family-photo-image"
+        role="button"
+        tabindex="0"
+        aria-label="Klik untuk memperbesar foto keluarga"
+    >
+</div>
+
+<!-- POP-UP FOTO KELUARGA -->
+<div
+    id="family-popup"
+    class="family-popup"
+    aria-hidden="true"
+>
+    <button
+        type="button"
+        class="family-popup-close"
+        aria-label="Tutup foto"
+    >&times;</button>
+
+    <img
+        id="family-popup-image"
+        src=""
+        alt="Foto keluarga Fio"
+    >
+</div>
+
+<!-- JUDUL DAN PESAN -->
+<div class="parents-text">
+    <h3>UNTUK <span>PAPA & MAMA</span></h3>
+
+    <p>
+        untuk mama papa 
+
+        ma pa .. tunggu aku suksess yaaa aku akan beliin apapunnn yangg mama papa mauu dan adik adik mau ,
+        doain aku terus ma pa sebab ak d sinii sendirian 🥹 mama papa di sana sehat sehatt yaaa smogaa allah berikan 
+        keajaiban untuk papa biar cepat sembuuuh semoga keluarga kita balik seperti dulu lagi di mana rumah itu 
+        sangat ceria sebelum di buat hancur olehhh orang itu.. akuu minta maaf maa paa kalau aku ada salahh 
+        atau pernah buat mama papa kecewa .. akuu rindu sama korangg  , aku sayang sama korangg semuaa 🤍🤍
+    </p>
+</div>
+
+
+<!-- TOMBOL HOME DAN PLAY MUSIC -->
+<div class="parents-buttons">
+    <a href="#home" class="button-primary">HOME</a>
+
+    <button
+        type="button"
+        class="button-secondary"
+        id="parents-music-button"
+    >
+        ▶ PLAY MUSIC
+    </button>
+</div>
+
+<!-- PEMUTAR MUSIK KELUARGA -->
+<audio id="parents-audio" preload="auto">
+    <source src="Kaulah%20Segalanya.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+(function () {
+    const audio = document.getElementById("parents-audio");
+    const button = document.getElementById("parents-music-button");
+
+    if (!audio || !button) return;
+
+    // Mencegah event klik ganda dari script ini.
+    button.onclick = async function (event) {
+        event.preventDefault();
+
+        if (audio.paused) {
+            try {
+                await audio.play();
+            } catch (error) {
+                console.error(error);
+                alert("Musik gagal diputar. Periksa file MP3.");
+            }
+        } else {
+            audio.pause();
+        }
+    };
+
+    audio.onplay = function () {
+        button.textContent = "❚❚ PAUSE MUSIC";
+    };
+
+    audio.onpause = function () {
+        button.textContent = "▶ PLAY MUSIC";
+    };
+
+    audio.onended = function () {
+        button.textContent = "▶ PLAY MUSIC";
+    };
+})();
+</script>
+</section>
+
+    
+
+</body>
+</html>
+
+
+<!-- SCRIPT POP-UP FOTO KELUARGA -->
+<script>
+    const familyPhoto =
+        document.getElementById("family-photo-image");
+
+    const familyPopup =
+        document.getElementById("family-popup");
+
+    const familyPopupImage =
+        document.getElementById("family-popup-image");
+
+    const familyPopupClose =
+        document.querySelector(".family-popup-close");
+
+    function openFamilyPopup() {
+        familyPopupImage.src = familyPhoto.src;
+        familyPopupImage.alt = familyPhoto.alt;
+
+        familyPopup.classList.add("active");
+        familyPopup.setAttribute("aria-hidden", "false");
+    }
+
+    function closeFamilyPopup() {
+        familyPopup.classList.remove("active");
+        familyPopup.setAttribute("aria-hidden", "true");
+    }
+
+    familyPhoto.addEventListener("click", openFamilyPopup);
+
+    familyPhoto.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openFamilyPopup();
+        }
+    });
+
+    familyPopupClose.addEventListener("click", closeFamilyPopup);
+
+    familyPopup.addEventListener("click", function (event) {
+        if (event.target === familyPopup) {
+            closeFamilyPopup();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (
+            event.key === "Escape" &&
+            familyPopup.classList.contains("active")
+        ) {
+            closeFamilyPopup();
+        }
+    });
+</script>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <a href="#home" class="footer-logo">
+            BY <span>FIO</span>
+        </a>
+
+        <p class="footer-tagline">
+            MY LIFE. MY STORY. MY WORLD.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+            &copy; 2026 BY FIO. ALL RIGHTS RESERVED.
+        </p>
+
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        // MENU RESPONSIF: buka/tutup menu pada HP
+        const siteHeader = document.getElementById("header");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const mainNavigation = document.getElementById("main-navigation");
+
+        function closeMenu() {
+            siteHeader.classList.remove("menu-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Buka menu");
+        }
+
+        function openMenu() {
+            siteHeader.classList.add("menu-open");
+            menuToggle.setAttribute("aria-expanded", "true");
+            menuToggle.setAttribute("aria-label", "Tutup menu");
+        }
+
+        menuToggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (siteHeader.classList.contains("menu-open")) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        mainNavigation.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                closeMenu();
+            });
+        });
+
+        document.addEventListener("click", function (event) {
+            if (!siteHeader.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+
+        // MUSIC PLAYER
+        const audioPlayer = document.getElementById("audio-player");
+        const musicTitle = document.getElementById("music-title");
+        const playButtons = document.querySelectorAll(".play-track");
+
+        playButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                const songSrc = button.dataset.src;
+                const songTitle = button.dataset.title;
+
+                const currentSrc = audioPlayer.currentSrc
+                    ? new URL(audioPlayer.currentSrc).pathname
+                    : "";
+
+                const selectedSrc = new URL(
+                    songSrc,
+                    window.location.href
+                ).pathname;
+
+                if (currentSrc === selectedSrc) {
+                    if (audioPlayer.paused) {
+                        audioPlayer.play().catch(function(error) {
+                            console.log("Musik tidak dapat diputar:", error);
+                        });
+                    } else {
+                        audioPlayer.pause();
+                    }
+                    return;
+                }
+
+                audioPlayer.src = songSrc;
+                audioPlayer.load();
+                musicTitle.textContent = songTitle;
+
+                audioPlayer.play().catch(function(error) {
+                    console.log("Musik tidak dapat diputar:", error);
+                });
+            });
+        });
+
+        // POP-UP FOTO
+        const galleryImages = Array.from(
+            document.querySelectorAll(
+                ".gallery-container .gallery-item img"
+            )
+        );
+
+        const imagePopup = document.getElementById("image-popup");
+        const popupImage = document.getElementById("popup-image");
+        const popupCounter = document.getElementById("popup-counter");
+        const popupClose = document.querySelector(".popup-close");
+        const popupPrev = document.querySelector(".popup-prev");
+        const popupNext = document.querySelector(".popup-next");
+
+        let currentImageIndex = 0;
+
+        function showPopupImage(index) {
+            currentImageIndex =
+                (index + galleryImages.length) % galleryImages.length;
+
+            const selectedImage = galleryImages[currentImageIndex];
+
+            popupImage.src = selectedImage.src;
+            popupImage.alt = selectedImage.alt;
+
+            popupCounter.textContent =
+                (currentImageIndex + 1) + " / " + galleryImages.length;
+        }
+
+        function openPopup(index) {
+            showPopupImage(index);
+
+            imagePopup.classList.add("active");
+            imagePopup.setAttribute("aria-hidden", "false");
+        }
+
+        function closePopup() {
+            imagePopup.classList.remove("active");
+            imagePopup.setAttribute("aria-hidden", "true");
+        }
+
+        galleryImages.forEach(function(img, index) {
+            img.addEventListener("click", function() {
+                openPopup(index);
+            });
+        });
+
+        popupClose.addEventListener("click", closePopup);
+
+        popupPrev.addEventListener("click", function() {
+            showPopupImage(currentImageIndex - 1);
+        });
+
+        popupNext.addEventListener("click", function() {
+            showPopupImage(currentImageIndex + 1);
+        });
+
+        imagePopup.addEventListener("click", function(event) {
+            if (event.target === imagePopup) {
+                closePopup();
+            }
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (!imagePopup.classList.contains("active")) {
+                return;
+            }
+
+            if (event.key === "Escape") {
+                closePopup();
+            }
+
+            if (event.key === "ArrowLeft") {
+                showPopupImage(currentImageIndex - 1);
+            }
+
+            if (event.key === "ArrowRight") {
+                showPopupImage(currentImageIndex + 1);
+            }
+        });
+    </script>
+
+</body>
+</html>
